@@ -26,6 +26,10 @@ class Model{
 
 class View{
   constructor(){
+    this.catname = $("#catname"); //h3
+    this.meow = $("#meow");  //p
+    this.clickcount = $("#meow > span"); //span
+    this.image = $("#cat-container > img") //img
   }
 
   renderTabs(namelist){
@@ -39,17 +43,22 @@ class View{
   }
 
   updatePicture(obj, id){
-    let counterid = "counter".concat(id);
-    let imageid = "cat".concat(id);
 
-    let title = '<h3>'+ obj.name +'</h3><p>Meow! ... Click me! <span id="'+
-      counterid +'">'+ obj.counter +'</span></p>';
+    this.catname.html(obj.name); //Title - Cat name
+    this.meow.html("Meow! Click me!.... ");
 
-    let image =
-      '<img id="' + imageid + '" class="cat-image" src="images/' +
-        obj.picture + '" alt="Picture of cat named '+ obj.name + '">';
+    this.clickcount.attr("id" , "counter".concat(id) );
+    this.clickcount.html(obj.counter); //Click Counter
 
-    $("#cat-container").html(title + image);
+    this.meow.append(this.clickcount.text(obj.counter));
+
+    //img tag
+    this.image.attr({
+      "id"  : "cat".concat(id),
+      "src" : "images/".concat(obj.picture),
+      "alt" : "Picture of cat named ".concat(obj.name),
+      "class" : "cat-image"
+    });
   }
   updateCounter(id, count){
       let spanid = "#counter".concat(id);
@@ -66,7 +75,7 @@ class Controller{
   }
 
   addTabEvtListener(){
-    //Add the event Listeners
+    //Add the event Listeners to the tab container
     $("#tab-container").click(function(evt){
       let id = evt.target.id;
       //Deactivate all buttons/tabs
@@ -91,7 +100,7 @@ class Controller{
         view.updateCounter(id, model.getCounter(id));
     });
   }
-  render(){
+  init(){
     view.renderTabs(this.getAllNames());
     this.addTabEvtListener();
 
@@ -102,4 +111,4 @@ let model = new Model();
 let view = new View();
 let controller = new Controller();
 
-controller.render();
+controller.init();
