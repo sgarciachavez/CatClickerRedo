@@ -164,7 +164,8 @@ class Controller{
           //rerender
           view.renderTabs(model.getAllNames());
           view.updatePicture(model.getCurrentCat(), newCatInfo.id);
-
+          //Update and then hide form
+          $("#form").addClass("hide");
       }else if(event.target.value === "Cancel"){
         $("#form").addClass("hide");
       }
