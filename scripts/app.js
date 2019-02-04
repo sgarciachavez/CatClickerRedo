@@ -54,7 +54,6 @@ class View{
     this.input_caturl = $("#caturl");
     this.input_catclicks = $("#catclicks");
     this.input_catid = $("#catid");
-
   }
 
   renderTabs(namelist){
