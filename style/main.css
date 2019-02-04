@@ -32,13 +32,45 @@ body, main{
   transition: 0.3s;
 }
 
+.admin {
+  border: 1px solid #4c825f;
+  background-color: #cedbd2;
+  font-size: .75em;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+.vertical-space{
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+.admin-area{
+  padding: 14px 16px;
+
+  display: inline-block;
+  width: 50%;
+
+}
+form{
+  text-align: left;
+}
+
+label{
+  padding-right: 2em;
+}
+input[type=text] {
+
+   font-size: 1em;
+}
+.submitbuttons{
+  text-align: center;
+}
 /* Change background color of buttons on hover */
-.tab button:hover {
+button:hover {
   background-color: #daede0;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+button.active {
   background-color: #b7ccbe;
 }
 

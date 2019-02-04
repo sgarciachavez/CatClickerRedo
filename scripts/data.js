@@ -1,29 +1,29 @@
 const cat_data = [
   { name: "Aspen",
-    picture: "calico0.jpg",
+    picture: "images/calico0.jpg",
     counter: 0
   },
   {
     name: "Cable",
-    picture: "calico1.jpg",
+    picture: "images/calico1.jpg",
     counter: 0
   },
   { name: "Dallas",
-    picture: "calico2.jpg",
+    picture: "images/calico2.jpg",
     counter: 0
   },
   {
     name: "Finley",
-    picture: "calico3.jpg",
+    picture: "images/calico3.jpg",
     counter: 0
   },
   { name: "Hayden",
-    picture: "calico4.jpg",
+    picture: "images/calico4.jpg",
     counter: 0
   },
   {
     name: "Keelan",
-    picture: "calico5.jpg",
+    picture: "images/calico5.jpg",
     counter: 0
   }
 ];

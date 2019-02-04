@@ -18,10 +18,40 @@
 
       <div id="cat-container">
         <!-- Picture displayed here!-->
-        <h3 id="catname"></h3>
-        <p id="meow"><span></span></p>
+        <h3></h3>
+        <p><span></span></p>
         <img>
+        <br>
+        <button id="" class="admin vertical-space hide">Admin</button>
       </div>
+
+      <div id="admin-area" class="admin-area">
+        <form id="form" action="" class="hide">
+          <br>
+          <fieldset>
+            <legend>Update Cat Information</legend>
+            <div>
+              <label for="catname">Cat name:</label>
+              <input id="catname" type="text" name="catname">
+            </div>
+            <div>
+              <label for="caturl">Cat url:</label>
+              <input id="caturl" type="text" name="caturl">
+            </div>
+            <div>
+              <label for="catclicks">Cat clicks:</label>
+              <input id="catclicks" type="text" name="catclicks">
+            </div>
+          </fieldset>
+          <br>
+          <div class="submitbuttons">
+            <input type="submit" value="Cancel" class="admin">
+            <input type="submit" value="Submit" class="admin">
+            <input type="hidden" id="catid" name="catid" value="">
+          </div>
+        </form>
+      </div>
+
     </main>
     <script src="scripts/jquery-3.3.1.js"></script>
     <script src="scripts/data.js"></script>
